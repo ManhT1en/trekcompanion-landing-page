@@ -204,18 +204,6 @@
           <h2>Lắng nghe nhu cầu chuẩn bị và an toàn ngoài thực địa</h2>
         </div>
         <div class="research-layout">
-          <div class="research-images reveal">
-            <img
-              src="./img/interview-participants.png"
-              alt="Ảnh minh họa nhóm người tham gia phỏng vấn dự án TrekCompanion"
-              loading="lazy"
-            />
-            <img
-              src="./img/research-trekking-group-forest.jpg"
-              alt="Nhóm trekking trong rừng được dùng làm bối cảnh nghiên cứu người dùng"
-              loading="lazy"
-            />
-          </div>
           <div class="research-cards">
             <article class="glass-card reveal">
               <h3>Mục tiêu phỏng vấn</h3>
@@ -229,6 +217,23 @@
               <h3>Đối tượng phỏng vấn</h3>
               <p>Người mới đi trekking, người đi theo nhóm cuối tuần và người có kinh nghiệm nhưng bận rộn trong khâu chuẩn bị.</p>
             </article>
+          </div>
+          <div class="research-images reveal">
+            <figure class="research-image-card interview-card">
+              <img
+                class="interview-participants-img"
+                src="./img/interview-participants.png"
+                alt="Ảnh minh họa nhóm người tham gia phỏng vấn dự án TrekCompanion"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="research-image-card forest-card">
+              <img
+                src="./img/research-trekking-group-forest.jpg"
+                alt="Nhóm trekking trong rừng được dùng làm bối cảnh nghiên cứu người dùng"
+                loading="lazy"
+              />
+            </figure>
           </div>
         </div>
       </section>
@@ -352,10 +357,12 @@
                   <h3>ERD DrawSQL</h3>
                   <p>Sơ đồ ERD mô tả các bảng dữ liệu chính và mối quan hệ trong hệ thống TrekCompanion.</p>
                 </div>
-                <a class="btn btn-secondary" href="https://drawsql.app/teams/thao-van/diagrams/erd" target="_blank" rel="noreferrer">Mở ERD trên DrawSQL</a>
+                <a class="btn btn-secondary" id="drawsql-public-link" href="https://drawsql.app/teams/thao-van/diagrams/erd" target="_blank" rel="noreferrer">Mở ERD trên DrawSQL</a>
               </div>
               <div class="erd-embed">
+                <!-- Change the v= value when the DrawSQL embed does not refresh after editing -->
                 <iframe
+                  id="drawsql-embed"
                   width="100%"
                   height="500px"
                   style="box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); border-radius:15px;"
@@ -364,11 +371,12 @@
                   scrolling="no"
                   title="Embedded DrawSQL IFrame"
                   frameborder="0"
-                  src="https://drawsql.app/teams/thao-van/diagrams/erd/embed"
+                  src="https://drawsql.app/teams/thao-van/diagrams/erd/embed?v=20260518"
                 ></iframe>
               </div>
               <p class="embed-fallback">
                 Nếu embed không hiển thị do quyền truy cập, hãy mở trực tiếp bằng nút “Mở ERD trên DrawSQL”.
+                Nếu ERD vừa được chỉnh sửa nhưng chưa hiển thị bản mới, hãy mở trực tiếp DrawSQL hoặc refresh mạnh trình duyệt.
               </p>
             </div>
           </div>

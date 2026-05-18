@@ -14,6 +14,21 @@ const lightboxImage = lightbox?.querySelector("img");
 const lightboxCaption = lightbox?.querySelector("figcaption");
 const lightboxClose = lightbox?.querySelector(".lightbox-close");
 const lightboxTriggers = document.querySelectorAll("[data-lightbox]");
+const drawsqlEmbed = document.querySelector("#drawsql-embed");
+const drawsqlPublicLink = document.querySelector("#drawsql-public-link");
+
+const DRAWSQL_PUBLIC_URL = "https://drawsql.app/teams/thao-van/diagrams/erd";
+const DRAWSQL_EMBED_URL = "https://drawsql.app/teams/thao-van/diagrams/erd/embed";
+// Change this value when the DrawSQL embed does not refresh after editing.
+const DRAWSQL_EMBED_VERSION = "20260518";
+
+if (drawsqlEmbed) {
+  drawsqlEmbed.src = `${DRAWSQL_EMBED_URL}?v=${DRAWSQL_EMBED_VERSION}`;
+}
+
+if (drawsqlPublicLink) {
+  drawsqlPublicLink.href = DRAWSQL_PUBLIC_URL;
+}
 
 function updateProgress() {
   const scrollTop = window.scrollY;
