@@ -212,6 +212,7 @@ button {
   position: relative;
   z-index: 2;
   width: var(--container);
+  max-width: 860px;
   padding-top: 36px;
 }
 
@@ -241,12 +242,15 @@ h2 {
 }
 
 .hero-tagline {
-  max-width: 720px;
+  max-width: none;
+  width: max-content;
   margin: 24px 0 0;
   color: var(--gold);
   font-family: "Outfit", sans-serif;
-  font-size: clamp(1.4rem, 3vw, 2.6rem);
+  font-size: clamp(1.4rem, 2.6vw, 2.4rem);
   font-weight: 700;
+  line-height: 1.15;
+  white-space: nowrap;
 }
 
 .hero-copy {
@@ -1137,6 +1141,15 @@ h2 {
 
   .figma-shell iframe {
     height: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-tagline {
+    width: auto;
+    max-width: 100%;
+    white-space: normal;
+    font-size: clamp(1.35rem, 7vw, 2rem);
   }
 }
 
