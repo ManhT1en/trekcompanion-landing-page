@@ -858,11 +858,24 @@ h2 {
   box-shadow: 0 20px 70px rgba(0, 0, 0, 0.28);
 }
 
-.erd-embed iframe {
+.erd-image-wrap {
+  width: 100%;
+  overflow: auto;
+  padding: 16px;
+}
+
+.erd-image-wrap a {
+  display: block;
+}
+
+.erd-image {
   display: block;
   width: 100%;
-  height: clamp(720px, 78vh, 850px);
-  border: 0;
+  height: auto;
+  object-fit: contain;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);
 }
 
 .embed-fallback {
@@ -1135,8 +1148,12 @@ h2 {
     flex-direction: column;
   }
 
-  .erd-embed iframe {
-    height: clamp(520px, 72vh, 600px);
+  .erd-image-wrap {
+    overflow-x: auto;
+  }
+
+  .erd-image {
+    min-width: 900px;
   }
 
   .figma-shell iframe {

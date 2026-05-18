@@ -368,24 +368,19 @@
       </a>
     </div>
 
-    <div class="erd-embed">
-      <!-- Change the v= value when DrawSQL embed does not refresh after editing -->
-      <iframe
-        width="100%"
-        height="720px"
-        style="box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); border-radius:15px;"
-        allowtransparency="true"
-        allowfullscreen="true"
-        scrolling="no"
-        title="Embedded DrawSQL IFrame"
-        frameborder="0"
-        src="https://drawsql.app/teams/thao-van/diagrams/erd/embed?v=20260519"
-      ></iframe>
+    <div class="erd-embed erd-image-wrap">
+      <a href="./img/drawSQL.jpg" target="_blank" rel="noreferrer">
+        <img
+          src="./img/drawSQL.jpg"
+          alt="ERD DrawSQL của hệ thống TrekCompanion"
+          loading="lazy"
+          class="erd-image"
+        />
+      </a>
     </div>
 
     <p class="embed-fallback">
-      Nếu embed không hiển thị do quyền truy cập, hãy mở trực tiếp bằng nút “Mở ERD trên DrawSQL”.
-      Nếu ERD vừa được chỉnh sửa nhưng chưa hiển thị bản mới, hãy bấm Ctrl + Shift + R hoặc đổi giá trị v= trong iframe.
+      Ảnh ERD được lưu local trong thư mục img. Khi cập nhật ERD, hãy thay file ./img/drawSQL.jpg rồi push lại code.
     </p>
   </div>
 </div>
