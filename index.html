@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="TrekCompanion - ứng dụng đồng hành giúp chuẩn bị và trekking an toàn hơn với bản đồ offline, cảnh báo lệch tuyến, SOS và checklist thông minh."
+    />
+    <title>TrekCompanion | Trekking & Chill</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header" id="site-header">
+      <a class="brand" href="#hero" aria-label="TrekCompanion">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img">
+            <path d="M12 2 3 21h18L12 2Zm0 5.1 4.9 10.4H7.1L12 7.1Zm0 5.2-1.7 3.6h3.4L12 12.3Z" />
+          </svg>
+        </span>
+        <span>TrekCompanion</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links" aria-label="Điều hướng chính">
+        <a href="#overview">Tổng quan</a>
+        <a href="#solution">Giải pháp</a>
+        <a href="#research">Nghiên cứu</a>
+        <a href="#diagrams">Mô hình</a>
+        <a href="#prototype">Prototype</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section" id="hero">
+        <div class="hero-bg" aria-hidden="true">
+          <img src="./img/hero-trekcompanion-cover.png" alt="" />
+        </div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-route" aria-hidden="true"></div>
+
+        <div class="hero-content">
+          <p class="eyebrow reveal">BA2601 · Trekking & Chill</p>
+          <h1 class="hero-title reveal">TrekCompanion</h1>
+          <p class="hero-tagline reveal">Rừng núi thênh thang - Bước đi vững vàng</p>
+          <p class="hero-copy reveal">
+            Ứng dụng đồng hành giúp người dùng khám phá cung đường, lập kế hoạch, tải bản đồ
+            offline, nhận cảnh báo lệch tuyến và gửi SOS khi cần trong hành trình trekking.
+          </p>
+          <div class="hero-actions reveal">
+            <a class="btn btn-primary" href="#solution">
+              <span>Xem giải pháp</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M13.2 5.3 19.9 12l-6.7 6.7-1.4-1.4 4.3-4.3H4v-2h12.1l-4.3-4.3 1.4-1.4Z" />
+              </svg>
+            </a>
+            <a class="btn btn-secondary" href="#prototype">Xem prototype</a>
+          </div>
+        </div>
+
+        <div class="floating-badges" aria-label="Tính năng nổi bật">
+          <div class="float-badge badge-one">Offline GPS</div>
+          <div class="float-badge badge-two">SOS</div>
+          <div class="float-badge badge-three">AI Checklist</div>
+          <div class="float-badge badge-four">Route Warning</div>
+        </div>
+      </section>
+
+      <section class="section overview" id="overview">
+        <div class="section-grid">
+          <div class="media-panel reveal">
+            <img
+              src="./img/project-overview-trekking-forest.jpg"
+              alt="Người trekking trong khu rừng xanh, gợi bối cảnh an toàn hành trình"
+              loading="lazy"
+            />
+          </div>
+          <div class="section-copy reveal">
+            <p class="eyebrow">Project Overview</p>
+            <h2>Trekking không chỉ là đi xa, mà là đi an toàn.</h2>
+            <p>
+              Người đi trekking cần thông tin cung đường đáng tin cậy, dữ liệu thời tiết,
+              checklist thiết bị, bản đồ hoạt động khi mất sóng và một kênh hỗ trợ khẩn cấp
+              trong những tình huống rủi ro.
+            </p>
+            <p>
+              TrekCompanion gom các nhu cầu đó vào một trải nghiệm có cấu trúc: khám phá,
+              chuẩn bị, điều hướng, cảnh báo và đánh giá sau chuyến đi.
+            </p>
+            <div class="metric-row">
+              <div>
+                <strong>4</strong>
+                <span>rủi ro chính</span>
+              </div>
+              <div>
+                <strong>7</strong>
+                <span>bước hành trình</span>
+              </div>
+              <div>
+                <strong>AI</strong>
+                <span>gợi ý checklist</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section problems" id="problems">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Problem Space</p>
+          <h2>Những rào cản làm chuyến đi mất an toàn</h2>
+        </div>
+        <div class="card-grid problem-grid">
+          <article class="feature-card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2 2 20h20L12 2Zm0 4.2 6.5 11.8h-13L12 6.2ZM11 10h2v4h-2v-4Zm0 5h2v2h-2v-2Z" /></svg>
+            </span>
+            <h3>Rủi ro sinh tồn thực tế</h3>
+            <p>Thời tiết, địa hình, mất liên lạc và thiếu chuẩn bị có thể biến một chuyến đi thành tình huống nguy hiểm.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z" /></svg>
+            </span>
+            <h3>Phụ thuộc vào bản đồ online</h3>
+            <p>Khi vào rừng núi, mất sóng khiến người dùng khó xác định vị trí và hướng đi tiếp theo.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M7 3h10v2h4v16H3V5h4V3Zm2 2h6V4H9v1Zm10 2H5v12h14V7Zm-9 9-3-3 1.4-1.4 1.6 1.6 4.6-4.6L16 10l-6 6Z" /></svg>
+            </span>
+            <h3>Checklist chưa cá nhân hóa</h3>
+            <p>Danh sách đồ dùng chung chung làm người dùng dễ quên món quan trọng theo thời tiết, cung đường hoặc thể trạng.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M11 18h2v-2h-2v2Zm1-16a10 10 0 1 0 10 10h-2a8 8 0 1 1-8-8V2Zm0 4a4 4 0 0 0-4 4h2a2 2 0 1 1 2 2h-1v3h2v-1.2a4 4 0 0 0-1-7.8Z" /></svg>
+            </span>
+            <h3>Người mới không biết bắt đầu từ đâu</h3>
+            <p>Thiếu kinh nghiệm chọn cung, chuẩn bị đồ và đánh giá độ khó khiến người mới dễ trì hoãn hoặc chọn sai chuyến đi.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section solution" id="solution">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Goal / Solution</p>
+          <h2>Một hệ thống hỗ trợ trước, trong và sau chuyến đi</h2>
+        </div>
+        <div class="solution-grid">
+          <article class="solution-card reveal">
+            <span>01</span>
+            <h3>Bản đồ offline & định vị GPS</h3>
+            <p>Giúp người dùng theo dõi vị trí ngay cả khi không có mạng, giảm phụ thuộc vào bản đồ online.</p>
+          </article>
+          <article class="solution-card reveal">
+            <span>02</span>
+            <h3>Cảnh báo đi lệch đường</h3>
+            <p>So sánh vị trí hiện tại với tuyến đã chọn để nhắc người dùng quay lại khi có nguy cơ lạc hướng.</p>
+          </article>
+          <article class="solution-card reveal">
+            <span>03</span>
+            <h3>Gửi tín hiệu SOS</h3>
+            <p>Cung cấp hành động khẩn cấp để gửi vị trí và thông tin sức khỏe cho nhóm hỗ trợ.</p>
+          </article>
+          <article class="solution-card reveal">
+            <span>04</span>
+            <h3>Checklist thông minh / AI gợi ý</h3>
+            <p>Gợi ý đồ dùng theo cung đường, thời tiết, kinh nghiệm và hồ sơ cá nhân để chuẩn bị đầy đủ hơn.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section journey" id="journey">
+        <div class="section-heading reveal">
+          <p class="eyebrow">User Journey</p>
+          <h2>Luồng trải nghiệm từ ý định đến hoàn tất chuyến đi</h2>
+        </div>
+        <div class="timeline reveal">
+          <div class="timeline-line" aria-hidden="true"></div>
+          <div class="timeline-step"><span>01</span><p>Khám phá cung đường</p></div>
+          <div class="timeline-step"><span>02</span><p>Chọn ngày / lập kế hoạch</p></div>
+          <div class="timeline-step"><span>03</span><p>Tải bản đồ offline</p></div>
+          <div class="timeline-step"><span>04</span><p>Chuẩn bị checklist</p></div>
+          <div class="timeline-step"><span>05</span><p>Bắt đầu trekking</p></div>
+          <div class="timeline-step"><span>06</span><p>Theo dõi hành trình</p></div>
+          <div class="timeline-step"><span>07</span><p>SOS / đánh giá</p></div>
+        </div>
+      </section>
+
+      <section class="section research" id="research">
+        <div class="section-heading reveal">
+          <p class="eyebrow">User Research</p>
+          <h2>Lắng nghe nhu cầu chuẩn bị và an toàn ngoài thực địa</h2>
+        </div>
+        <div class="research-layout">
+          <div class="research-images reveal">
+            <img
+              src="./img/interview-participants.png"
+              alt="Ảnh minh họa nhóm người tham gia phỏng vấn dự án TrekCompanion"
+              loading="lazy"
+            />
+            <img
+              src="./img/research-trekking-group-forest.jpg"
+              alt="Nhóm trekking trong rừng được dùng làm bối cảnh nghiên cứu người dùng"
+              loading="lazy"
+            />
+          </div>
+          <div class="research-cards">
+            <article class="glass-card reveal">
+              <h3>Mục tiêu phỏng vấn</h3>
+              <p>Xác định cách người dùng chọn cung đường, chuẩn bị đồ, xử lý mất sóng và phản ứng khi có rủi ro an toàn.</p>
+            </article>
+            <article class="glass-card reveal">
+              <h3>Câu hỏi phỏng vấn</h3>
+              <p>Người dùng chuẩn bị checklist thế nào, dùng bản đồ nào, sợ điều gì nhất và cần hỗ trợ gì trong tình huống khẩn cấp.</p>
+            </article>
+            <article class="glass-card reveal">
+              <h3>Đối tượng phỏng vấn</h3>
+              <p>Người mới đi trekking, người đi theo nhóm cuối tuần và người có kinh nghiệm nhưng bận rộn trong khâu chuẩn bị.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section insights" id="insights">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Insights</p>
+          <h2>5 phát hiện chính từ người dùng</h2>
+        </div>
+        <div class="insight-gallery">
+          <button class="image-card reveal" type="button" data-lightbox="./img/insight-1-newbie-start-trekking.png" data-title="Người mới muốn đi trekking nhưng không biết bắt đầu từ đâu">
+            <img src="./img/insight-1-newbie-start-trekking.png" alt="Insight 1: người mới muốn đi trekking nhưng chưa biết bắt đầu từ đâu" loading="lazy" />
+            <span>Người mới muốn đi trekking nhưng không biết bắt đầu từ đâu</span>
+          </button>
+          <button class="image-card reveal" type="button" data-lightbox="./img/insight-2-busy-trekkers-prep.png" data-title="Người dùng muốn đi trekking nhưng không có nhiều thời gian chuẩn bị">
+            <img src="./img/insight-2-busy-trekkers-prep.png" alt="Insight 2: người dùng bận rộn thiếu thời gian chuẩn bị trekking" loading="lazy" />
+            <span>Người dùng muốn đi trekking nhưng không có nhiều thời gian chuẩn bị</span>
+          </button>
+          <button class="image-card reveal" type="button" data-lightbox="./img/insight-3-online-map-dependence.png" data-title="Người dùng phụ thuộc vào bản đồ online nhưng lo mất sóng khi vào rừng núi">
+            <img src="./img/insight-3-online-map-dependence.png" alt="Insight 3: phụ thuộc bản đồ online và lo mất sóng trong rừng núi" loading="lazy" />
+            <span>Người dùng phụ thuộc vào bản đồ online nhưng lo mất sóng khi vào rừng núi</span>
+          </button>
+          <button class="image-card reveal" type="button" data-lightbox="./img/insight-4-fear-off-route.png" data-title="Người dùng sợ đi lệch đường hoặc bị tách khỏi nhóm">
+            <img src="./img/insight-4-fear-off-route.png" alt="Insight 4: người dùng sợ đi lệch đường hoặc bị tách khỏi nhóm" loading="lazy" />
+            <span>Người dùng sợ đi lệch đường hoặc bị tách khỏi nhóm</span>
+          </button>
+          <button class="image-card reveal" type="button" data-lightbox="./img/insight-5-safety-checklist-alert.png" data-title="Checklist và cảnh báo an toàn giúp người dùng yên tâm hơn">
+            <img src="./img/insight-5-safety-checklist-alert.png" alt="Insight 5: checklist và cảnh báo an toàn giúp người dùng yên tâm hơn" loading="lazy" />
+            <span>Checklist và cảnh báo an toàn giúp người dùng yên tâm hơn</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="section persona" id="persona">
+        <div class="persona-card reveal">
+          <div class="persona-image">
+            <img
+              src="./img/persona-bui-minh-anh.png"
+              alt="User persona Bùi Minh Anh cho dự án TrekCompanion"
+              loading="lazy"
+            />
+          </div>
+          <div class="persona-copy">
+            <p class="eyebrow">User Persona</p>
+            <h2>Bùi Minh Anh</h2>
+            <p class="persona-meta">25 tuổi · Nhân viên văn phòng · Hà Nội</p>
+            <div class="persona-list">
+              <div>
+                <h3>Pain points</h3>
+                <p>Mất thời gian chuẩn bị, lo mất sóng, sợ đi sai đường, dễ quên đồ quan trọng.</p>
+              </div>
+              <div>
+                <h3>Goals</h3>
+                <p>Tìm cung đường phù hợp, chuẩn bị đủ đồ, có bản đồ offline, gửi SOS khi cần.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section diagrams" id="diagrams">
+        <div class="section-heading reveal">
+          <p class="eyebrow">System Diagrams</p>
+          <h2>Use Case, BPMN và mô hình dữ liệu</h2>
+        </div>
+        <div class="tabs reveal">
+          <div class="tab-list" role="tablist" aria-label="Sơ đồ TrekCompanion">
+            <button class="tab-button active" id="tab-usecase" type="button" role="tab" aria-selected="true" aria-controls="panel-usecase" data-tab="usecase">Use Case</button>
+            <button class="tab-button" id="tab-asis" type="button" role="tab" aria-selected="false" aria-controls="panel-asis" data-tab="asis">BPMN As-is</button>
+            <button class="tab-button" id="tab-tobe" type="button" role="tab" aria-selected="false" aria-controls="panel-tobe" data-tab="tobe">BPMN To-be</button>
+            <button class="tab-button" id="tab-select" type="button" role="tab" aria-selected="false" aria-controls="panel-select" data-tab="select">Chọn địa điểm</button>
+            <button class="tab-button" id="tab-navigation" type="button" role="tab" aria-selected="false" aria-controls="panel-navigation" data-tab="navigation">Điều hướng chuyến đi</button>
+            <button class="tab-button" id="tab-erd" type="button" role="tab" aria-selected="false" aria-controls="panel-erd" data-tab="erd">ERD DrawSQL</button>
+          </div>
+
+          <div class="tab-panel active" id="panel-usecase" role="tabpanel" aria-labelledby="tab-usecase" data-panel="usecase">
+            <figure class="diagram-frame">
+              <button type="button" class="diagram-zoom" data-lightbox="./img/use-case-diagram-trekking-app.png" data-title="Use Case Diagram">Click để xem lớn</button>
+              <div class="diagram-scroll">
+                <img src="./img/use-case-diagram-trekking-app.png" alt="Use Case Diagram của ứng dụng TrekCompanion" loading="lazy" />
+              </div>
+            </figure>
+          </div>
+          <div class="tab-panel" id="panel-asis" role="tabpanel" aria-labelledby="tab-asis" data-panel="asis">
+            <figure class="diagram-frame">
+              <button type="button" class="diagram-zoom" data-lightbox="./img/bpmn-as-is-trekking-process.png" data-title="BPMN As-is">Click để xem lớn</button>
+              <div class="diagram-scroll">
+                <img src="./img/bpmn-as-is-trekking-process.png" alt="BPMN As-is mô tả quy trình trekking hiện tại" loading="lazy" />
+              </div>
+            </figure>
+          </div>
+          <div class="tab-panel" id="panel-tobe" role="tabpanel" aria-labelledby="tab-tobe" data-panel="tobe">
+            <figure class="diagram-frame">
+              <button type="button" class="diagram-zoom" data-lightbox="./img/bpmn-to-be-trekking-process.png" data-title="BPMN To-be">Click để xem lớn</button>
+              <div class="diagram-scroll">
+                <img src="./img/bpmn-to-be-trekking-process.png" alt="BPMN To-be mô tả quy trình trekking với TrekCompanion" loading="lazy" />
+              </div>
+            </figure>
+          </div>
+          <div class="tab-panel" id="panel-select" role="tabpanel" aria-labelledby="tab-select" data-panel="select">
+            <figure class="diagram-frame">
+              <button type="button" class="diagram-zoom" data-lightbox="./img/bpmn-select-destination.png" data-title="BPMN Chọn địa điểm">Click để xem lớn</button>
+              <div class="diagram-scroll">
+                <img src="./img/bpmn-select-destination.png" alt="BPMN quy trình chọn địa điểm trekking" loading="lazy" />
+              </div>
+            </figure>
+          </div>
+          <div class="tab-panel" id="panel-navigation" role="tabpanel" aria-labelledby="tab-navigation" data-panel="navigation">
+            <figure class="diagram-frame">
+              <button type="button" class="diagram-zoom" data-lightbox="./img/bpmn-trip-navigation-process.png" data-title="BPMN Điều hướng chuyến đi">Click để xem lớn</button>
+              <div class="diagram-scroll">
+                <img src="./img/bpmn-trip-navigation-process.png" alt="BPMN quy trình điều hướng chuyến đi trekking" loading="lazy" />
+              </div>
+            </figure>
+          </div>
+          <div class="tab-panel" id="panel-erd" role="tabpanel" aria-labelledby="tab-erd" data-panel="erd">
+            <div class="erd-card">
+              <div class="erd-header">
+                <div>
+                  <p class="eyebrow">Data Model / ERD</p>
+                  <h3>ERD DrawSQL</h3>
+                  <p>Sơ đồ ERD mô tả các bảng dữ liệu chính và mối quan hệ trong hệ thống TrekCompanion.</p>
+                </div>
+                <a class="btn btn-secondary" href="https://drawsql.app/teams/thao-van/diagrams/erd" target="_blank" rel="noreferrer">Mở ERD trên DrawSQL</a>
+              </div>
+              <div class="erd-embed">
+                <iframe
+                  width="100%"
+                  height="500px"
+                  style="box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); border-radius:15px;"
+                  allowtransparency="true"
+                  allowfullscreen="true"
+                  scrolling="no"
+                  title="Embedded DrawSQL IFrame"
+                  frameborder="0"
+                  src="https://drawsql.app/teams/thao-van/diagrams/erd/embed"
+                ></iframe>
+              </div>
+              <p class="embed-fallback">
+                Nếu embed không hiển thị do quyền truy cập, hãy mở trực tiếp bằng nút “Mở ERD trên DrawSQL”.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section prototype" id="prototype">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Interactive Prototype</p>
+          <h2>Prototype giao diện</h2>
+          <p>Figma prototype được nhúng trực tiếp để giữ đúng trải nghiệm như Notion, không dựng lại thủ công các màn hình.</p>
+        </div>
+        <div class="figma-shell reveal">
+          <!-- Replace FIGMA_EMBED_URL_HERE with the src from Figma Get embed code -->
+          <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/uDtoKuJfFZzrz0nTDpT0gj/ti%E1%BA%BFn-nguy%E1%BB%85n-s-team-library?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <h2>TrekCompanion</h2>
+      <p>Trekking & Chill · BA2601</p>
+      <span>Rừng núi thênh thang - mỗi bước đi đều có chuẩn bị, định hướng và phương án an toàn.</span>
+    </footer>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Xem ảnh lớn">
+      <button class="lightbox-close" type="button" aria-label="Đóng ảnh lớn"></button>
+      <figure>
+        <img src="" alt="" />
+        <figcaption></figcaption>
+      </figure>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
